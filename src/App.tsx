@@ -1,6 +1,7 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Image } from './components';
+import img1 from './img/1667744916682.png';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <Image src={img1} caption="Caption 1" />
       </header>
     </div>
   );
