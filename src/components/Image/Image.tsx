@@ -1,18 +1,15 @@
 import React from 'react';
+import { getImageURL } from '../../utilities';
 
 interface ImageProps {
-  src: string;
+  id: string;
   caption: string;
 }
 
-export const Image: React.FC<ImageProps> = ({ src, caption }) => {
-  return (
-    <div className="border-px border-white overflow-hidden">
-      <img
-        className="transition hover:scale-110 focus:scale-125 hover:brightness-110 focus:brightness-110 duration-200 cursor-pointer ease-out"
-        src={src}
-        alt={caption}
-      />
+export const Image: React.FC<ImageProps> = ({ id, caption }) => (
+  <div className="overflow-hidden rounded-sm">
+    <div className="transition hover:scale-110 focus:scale-125 hover:brightness-110 focus:brightness-110 duration-200 cursor-pointer ease-out shadow-inner">
+      <img className="Sirv" data-src={getImageURL(id)} alt={caption} />
     </div>
-  );
-};
+  </div>
+);
