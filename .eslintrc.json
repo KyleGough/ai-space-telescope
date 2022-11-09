@@ -21,7 +21,7 @@
     "tailwindcss/no-custom-classname": [
       "warn",
       {
-        "whitelist": ["Sirv", "twinkle"]
+        "whitelist": ["Sirv", "scifi"]
       }
     ]
   }

@@ -28,11 +28,9 @@ const Star: React.FC = () => {
       element.style.left = `${y}%`;
       element.style.height = `${size}px`;
       element.style.width = `${size}px`;
-      element.style.animation = `twinkle ${durationTwinkle}ms ease-in-out infinite, pulse 0.2s ease-in-out ${delayPulse} infinite`;
+      element.style.animation = `twinkle ${durationTwinkle}ms ease-in-out infinite, pulse 0.35s ease-in-out ${delayPulse}ms infinite`;
     }
   }, [ref]);
 
-  return (
-    <div ref={ref} className="twinkle absolute bg-yellow-100 rounded-full" />
-  );
+  return <div ref={ref} className="absolute bg-yellow-100 rounded-full" />;
 };
