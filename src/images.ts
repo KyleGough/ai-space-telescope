@@ -1,19 +1,31 @@
-interface ImageData {
+type ImageTag = 'Realistic' | 'Painting';
+export type Filter = ImageTag | 'All';
+
+export interface ImageData {
   id: string;
   caption: string;
+  tags: ImageTag[];
 }
 
 export const images: ImageData[] = [
-  { id: '14c127', caption: 'Gateway to a black hole' },
-  { id: '8c0104', caption: 'Nebula' },
-  { id: '16d6c7', caption: 'Acretion Disk' },
-  { id: 'be4b3f', caption: 'Nebula' },
-  { id: 'a9ca69', caption: 'Black Hole' },
-  { id: 'd63380', caption: 'Pillars of Creation' },
-  { id: 'cd6530', caption: 'Supermassive Black Hole' },
-  { id: '46186f', caption: 'Black Hole' },
-  { id: '3dadaf', caption: 'Solar System Watercolour' },
-  { id: '0db0a4', caption: 'Nebula' },
-  { id: 'b3e9a1', caption: 'Galaxy' },
-  { id: '6073e0', caption: 'Colourful Black Hole' },
+  { id: '14c127', caption: 'Gateway to a black hole', tags: ['Painting'] },
+  { id: '8c0104', caption: 'Nebula', tags: ['Realistic'] },
+  { id: '16d6c7', caption: 'Acretion Disk', tags: ['Realistic'] },
+  { id: 'be4b3f', caption: 'Nebula', tags: ['Realistic'] },
+  { id: 'a9ca69', caption: 'Black Hole', tags: ['Painting'] },
+  { id: 'd63380', caption: 'Pillars of Creation', tags: ['Realistic'] },
+  { id: 'cd6530', caption: 'Supermassive Black Hole', tags: ['Painting'] },
+  { id: '46186f', caption: 'Black Hole', tags: ['Realistic'] },
+  { id: '3dadaf', caption: 'Solar System Watercolour', tags: ['Painting'] },
+  { id: '0db0a4', caption: 'Nebula', tags: ['Realistic'] },
+  { id: 'b3e9a1', caption: 'Galaxy', tags: ['Realistic'] },
+  { id: '6073e0', caption: 'Colourful Black Hole', tags: ['Painting'] },
+  { id: '0a8a35', caption: 'Trifid Nebula', tags: ['Realistic'] },
+  { id: '2d9157', caption: 'Trifid Nebula', tags: ['Realistic'] },
+  { id: '3ee8dc', caption: 'Solar System Formation', tags: ['Realistic'] },
+  { id: '7205b2', caption: 'Alien Planet', tags: ['Painting'] },
+  { id: '435163', caption: 'High Energy', tags: ['Realistic'] },
+  { id: 'a673a0', caption: 'Planetary Nebula', tags: ['Realistic'] },
+  { id: 'ba7d93', caption: 'Quasar Overseers', tags: ['Painting'] },
+  { id: 'eec1a9', caption: 'Galaxy', tags: ['Realistic'] },
 ];
