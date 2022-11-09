@@ -12,7 +12,7 @@ export const Header: React.FC<HeaderProps> = ({ children }) => (
         Welcome to my gallery of science-fiction themed images generated using
         the amazing{' '}
         <a
-          className="duration-200 transition-colors text-lime-400 hover:text-lime-600 focus:text-lime-600"
+          className="duration-200 transition-colors text-lime-400 hover:text-lime-600"
           href="https://openai.com/dall-e-2/"
           target="_blank"
         >
