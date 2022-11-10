@@ -29,5 +29,10 @@ const Star: React.FC = () => {
     ref.current.style.animation = `twinkle ${durationTwinkle}ms ease-in-out infinite, pulse 0.5s ease-in-out ${delayPulse}ms infinite`;
   }, [ref]);
 
-  return <div ref={ref} className="absolute bg-yellow-100 rounded-full" />;
+  return (
+    <div
+      ref={ref}
+      className="absolute bg-yellow-100 rounded-full will-change-transform"
+    />
+  );
 };

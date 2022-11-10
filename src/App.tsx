@@ -19,8 +19,6 @@ export const App: React.FC = () => {
     );
   }, [filter]);
 
-  console.log('app');
-
   return (
     <>
       <Stars />
