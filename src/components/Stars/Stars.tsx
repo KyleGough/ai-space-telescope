@@ -4,7 +4,7 @@ const STARS_COUNT = 200;
 
 export const Stars: React.FC = () => {
   return (
-    <div className="fixed h-screen w-screen left-0 top-0 -z-10">
+    <div className="fixed h-screen w-screen left-0 top-0 -z-10 pointer-events-none">
       {Array.from(Array(STARS_COUNT)).map((_, i) => (
         <Star key={i} />
       ))}

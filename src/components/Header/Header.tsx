@@ -8,7 +8,7 @@ export const Header: React.FC<HeaderProps> = ({ children }) => (
       <h1 className="font-bold text-5xl my-4">
         DALL·E <span className="scifi">Sci-Fi</span> Gallery
       </h1>
-      <p className="mb-8 w-[56ch]">
+      <p className="mb-8 lg:w-[56ch] max-w-[56ch]">
         Welcome to my gallery of science-fiction themed images generated using
         the amazing{' '}
         <a
