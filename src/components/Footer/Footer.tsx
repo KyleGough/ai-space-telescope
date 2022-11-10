@@ -11,7 +11,7 @@ export const Footer: React.FC = () => (
         </a>
         <a
           className="p-2"
-          href="https://github.com/KyleGough/ai-image-gallery"
+          href="https://github.com/KyleGough/ai-space-telescope"
           target="_blank"
         >
           <GitHubIcon className="duration-200 transition-colors fill-white hover:fill-stone-300 focus:fill-stone-300 w-5 h-5" />

@@ -19,11 +19,6 @@ body {
   color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 @keyframes vertical-pan {
   from {
     background-position: center 0%;
@@ -59,7 +54,7 @@ code {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.15);
+    transform: scale(0.9);
   }
   100% {
     transform: scale(1);
