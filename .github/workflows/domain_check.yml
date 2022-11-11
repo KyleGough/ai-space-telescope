@@ -1,44 +1,34 @@
-name: Check domains
+name: Check Domain and SSL
 
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '0 8 * * *'
+    - cron:  '0 9 * * *'
 
 jobs:
-  hello:
+  domain:
     runs-on: ubuntu-latest
     name: Check domain
-    strategy:
-      matrix:
-        domain:
-          - https://ai-space-telescope.com
 
     steps:
       - name: Check domain SSL and registry expire date
         id: check-domain
         uses: codex-team/action-check-domain@v1
         with:
-          url: ${{ matrix.domain }}
+          url: https://ai-space-telescope.com
 
-      - name: Paid Till Date
-        run: echo 'Domain Paid Till: ${{ steps.check-domain.outputs.paid-till-date }}'
-
-      - name: SSL Expire Date
-        run: echo 'SSL Expire Date: ${{ steps.check-domain.outputs.ssl-expire-date }}'
-
-      - name: Create an issue if paid till number is below limit 
+      - name: Create an issue if domain expiry is below limit 
         if: ${{ steps.check-domain.outputs.paid-till-days-left && steps.check-domain.outputs.paid-till-days-left < 14 }}
         uses: rishabhgupta/git-action-issue@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          title: ⚠️ ${{ matrix.domain }} — registry expiries in ${{ steps.check-domain.outputs.paid-till-days-left }} days
-          body: 'Paid till: `${{ steps.check-domain.outputs.paid-till-date }}`'
+          title: ${{ matrix.domain }} - Expiries in ${{ steps.check-domain.outputs.paid-till-days-left }} days
+          body: 'Domain Expires: `${{ steps.check-domain.outputs.paid-till-date }}`'
 
-      - name: Create an issue if SSL lifespan days number is below limit 
+      - name: Create an issue if SSL lifespan is below limit 
         if: ${{ steps.check-domain.outputs.ssl-expire-days-left && steps.check-domain.outputs.ssl-expire-days-left < 14 }}
         uses: rishabhgupta/git-action-issue@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          title: 🧨 ${{ matrix.domain }} — SSL cert expires in ${{ steps.check-domain.outputs.ssl-expire-days-left }} days
-          body: 'Valid till: `${{ steps.check-domain.outputs.ssl-expire-date }}`'
+          title: ${{ matrix.domain }} — SSL certificate expires in ${{ steps.check-domain.outputs.ssl-expire-days-left }} days
+          body: 'SSL Expires: `${{ steps.check-domain.outputs.ssl-expire-date }}`'
