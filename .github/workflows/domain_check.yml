@@ -21,6 +21,12 @@ jobs:
         with:
           url: ${{ matrix.domain }}
 
+      - name: Paid Till Date
+        run: echo 'Domain Paid Till: ${{ steps.check-domain.outputs.paid-till-date }}'
+
+      - name: SSL Expire Date
+        run: echo 'SSL Expire Date: ${{ steps.check-domain.outputs.ssl-expire-date }}'
+
       - name: Create an issue if paid till number is below limit 
         if: ${{ steps.check-domain.outputs.paid-till-days-left && steps.check-domain.outputs.paid-till-days-left < 14 }}
         uses: rishabhgupta/git-action-issue@v2
