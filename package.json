@@ -1,6 +1,15 @@
 {
   "name": "ai-image-gallery",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Gallery of DALLE2 created Sci-Fi images",
+  "keywords": ["ai", "dalle2", "openai", "sci-fi", "gallery", "image"],
+  "homepage": "https://ai-space-telescope.com",
+  "license": "MIT",
+  "author": "Kyle Gough",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KyleGough/ai-space-telescope"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
