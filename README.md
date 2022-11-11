@@ -16,6 +16,7 @@ Gallery of science-fiction themed images generated using the amazing [DALL·E 2]
 
 ## Deploying
 ```sh
+npm install
 npm run build
 npm start
 ```
