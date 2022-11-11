@@ -17,7 +17,7 @@
   "plugins": ["@typescript-eslint", "tailwindcss", "prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": "warn",
     "tailwindcss/no-custom-classname": [
       "warn",
       {
