@@ -17,8 +17,12 @@ export const Image: React.FC<ImageProps> = ({ id, caption }) => {
 
   return (
     <>
-      <div onClick={openDialog} className="overflow-hidden rounded-sm">
-        <div className="duration-500 transition hover:scale-110 focus:scale-125 hover:brightness-110 focus:brightness-110 cursor-pointer ease-out shadow-inner">
+      <div
+        tabIndex={0}
+        onClick={openDialog}
+        className="group overflow-hidden rounded-sm"
+      >
+        <div className="duration-500 transition group-hover:scale-110 group-focus:scale-110 group-hover:brightness-110 group-focus:brightness-110 cursor-pointer ease-out shadow-inner">
           <ResponsiveImage src={imageURL} alt={caption} />
         </div>
       </div>
