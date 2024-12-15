@@ -33,7 +33,6 @@ body {
   background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  white-space: nowrap;
   animation: vertical-pan 2s linear infinite;
 }
 

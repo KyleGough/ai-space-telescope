@@ -3,10 +3,10 @@ import { HomeIcon } from '../../icons/HomeIcon';
 import dayjs from 'dayjs';
 
 export const Footer: React.FC = () => (
-  <footer className="bg-stone-900 text-stone-200 text-center py-4">
+  <footer className="text-stone-200 text-center py-4">
     <div className="container mx-auto">
       <div className="flex items-center justify-center">
-        <p className="mr-4">© Kyle Gough, 2022 - {dayjs().year()}</p>
+        <p className="mr-4">© Kyle Gough, {dayjs().year()}</p>
         <a
           className="p-2"
           href="https://kylegough.co.uk/"
