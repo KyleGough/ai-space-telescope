@@ -10,7 +10,15 @@ export const Header: React.FC<HeaderProps> = ({ children }) => (
       </h1>
       <p className="mb-8 lg:w-[56ch] max-w-[56ch]">
         Welcome to my curated gallery of science-fiction themed images generated
-        using various text-to-image models such as{' '}
+        using the following text-to-image models:{' '}
+        <a
+          className="duration-200 transition-colors text-lime-400 hover:text-lime-600 whitespace-nowrap"
+          href="https://flux1ai.com/schnell"
+          target="_blank"
+        >
+          FLUX.1-schnell
+        </a>
+        ,{' '}
         <a
           className="duration-200 transition-colors text-lime-400 hover:text-lime-600 whitespace-nowrap"
           href="https://openai.com/dall-e-2/"
@@ -37,7 +45,7 @@ export const Header: React.FC<HeaderProps> = ({ children }) => (
         . These are a hand picked selection of my favourite generated images.
       </p>
     </div>
-    <div className="w-full flex justify-start lg:justify-center items-center text-2xl gap-8 my-8 lg:my-0">
+    <div className="w-full flex justify-start lg:justify-end items-center text-2xl gap-8 my-8 lg:my-0">
       {children}
     </div>
   </div>
