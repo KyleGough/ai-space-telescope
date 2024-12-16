@@ -17,7 +17,6 @@
     "type": "git",
     "url": "https://github.com/KyleGough/ai-space-telescope"
   },
-  "type": "module",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
