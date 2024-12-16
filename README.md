@@ -12,7 +12,7 @@ Curated gallery of science-fiction themed images generated using text-to-image A
 
 <br />
 
-![homepage](https://github.com/user-attachments/assets/858f76fa-e14b-491f-bf39-3148c78fcba1)
+![homepage](https://github.com/user-attachments/assets/c77ec597-ba3b-4d84-adaf-62423b4a78dc)
 
 ## Deploying
 
