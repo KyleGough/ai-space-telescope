@@ -1,7 +1,13 @@
+type Model =
+  | 'PicLumen Realistic V2'
+  | 'Imagen 3'
+  | 'FLUX.1-schnell'
+  | 'DALLE 2';
+
 export interface ImageData {
   id: string;
   caption: string;
-  model: string;
+  model: Model;
 }
 
 export const images: ImageData[] = [
@@ -165,11 +171,17 @@ export const images: ImageData[] = [
   { id: 'fcd55f', caption: 'Green sky with nebula', model: 'DALLE 2' },
   { id: '0a8ce5', caption: 'Elliptical Galaxy', model: 'DALLE 2' },
   { id: '2c8a10', caption: 'Nebula', model: 'DALLE 2' },
+  {
+    id: '6fbb3a',
+    caption: 'Atmosphere of terrestrial planet',
+    model: 'FLUX.1-schnell',
+  },
   { id: '5ceff9', caption: 'Nebula', model: 'DALLE 2' },
   { id: '8bcc38', caption: 'Nebula', model: 'DALLE 2' },
   { id: '8ef2c0', caption: 'Spiral Galaxy', model: 'DALLE 2' },
   { id: '16d6c7', caption: 'Acretion Disk', model: 'DALLE 2' },
   { id: 'f01e55', caption: 'Nebula', model: 'DALLE 2' },
+  { id: 'e33f8c', caption: 'Rusted spacecraft', model: 'FLUX.1-schnell' },
   { id: 'efc10b', caption: 'Portal', model: 'DALLE 2' },
   { id: '5be10c', caption: 'Nebula', model: 'DALLE 2' },
   { id: '77ac1d', caption: 'Southern Ring Nebula', model: 'DALLE 2' },
@@ -181,6 +193,11 @@ export const images: ImageData[] = [
   { id: '0a8a35', caption: 'Trifid Nebula', model: 'DALLE 2' },
   { id: '2d9157', caption: 'Trifid Nebula', model: 'DALLE 2' },
   { id: '3ab0f6', caption: 'Pillars of Creation', model: 'DALLE 2' },
+  {
+    id: '390371',
+    caption: 'Atmosphere of terrestrial planet',
+    model: 'FLUX.1-schnell',
+  },
   { id: 'a673a0', caption: 'Planetary Nebula', model: 'DALLE 2' },
   { id: '3975a3', caption: 'Galaxy', model: 'DALLE 2' },
   { id: '2b0d51', caption: 'Pillars of Creation', model: 'DALLE 2' },
@@ -191,5 +208,10 @@ export const images: ImageData[] = [
   { id: '4c034a', caption: 'Nebula', model: 'DALLE 2' },
   { id: '084cb0', caption: 'Galaxy', model: 'DALLE 2' },
   { id: 'bbcf96', caption: 'Icy moon', model: 'Imagen 3' },
-  { id: 'b45726', caption: 'Close-up of terrestial planet', model: 'Imagen 3' },
+  {
+    id: 'b45726',
+    caption: 'Close-up of terrestrial planet',
+    model: 'Imagen 3',
+  },
+  { id: '71f753', caption: 'Neon spacecraft', model: 'FLUX.1-schnell' },
 ];

@@ -1,12 +1,12 @@
 import { readFile } from 'fs';
 import axios from 'axios';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const path = process.argv[2];
-
-const secrets = {
-  clientId: process.env.CLIENT_ID,
-  clientSecret: process.env.CLIENT_SECRET,
-};
+const clientId = process.env.CLIENT_ID;
+const clientSecret = process.env.CLIENT_SECRET;
 
 if (!path) {
   console.log('File must be provided.');
@@ -15,6 +15,16 @@ if (!path) {
 
 if (!path.toLowerCase().endsWith('.png')) {
   console.log('File must be a PNG file.');
+  process.exit(1);
+}
+
+if (!clientId) {
+  console.log('CLIENT_ID environment variable not provided.');
+  process.exit(1);
+}
+
+if (!clientSecret) {
+  console.log('CLIENT_SECRET environment variable not provided.');
   process.exit(1);
 }
 
@@ -54,6 +64,6 @@ const getRandomFileName = (length) => {
 };
 
 axios
-  .post('https://api.sirv.com/v2/token', secrets)
+  .post('https://api.sirv.com/v2/token', { clientId, clientSecret })
   .then((res) => uploadFile(res.data.token, path))
   .catch((err) => console.log(err));
