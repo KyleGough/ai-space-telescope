@@ -16,8 +16,13 @@ Curated gallery of science-fiction themed images generated using text-to-image A
 
 ## Deploying
 
+The production site is a static Create React App build published with GitHub Pages. Pushes to `master` run [`.github/workflows/pages.yml`](.github/workflows/pages.yml), which builds the app and deploys the `build` folder.
+
+After the first workflow run, the site is available at [https://kylegough.github.io/ai-space-telescope/](https://kylegough.github.io/ai-space-telescope/).
+
 ```sh
 npm install
 npm run build
-npm start
 ```
+
+Preview the production build locally with `npx serve -s build`. `npm start` still serves the same build through the Express app if you need that locally.
